@@ -1,0 +1,12 @@
+<h1>Your Cart 🛒</h1>
+
+{% for i in range(cart|length) %}
+    <p>
+        {{ cart[i].item }} - ₹{{ cart[i].price }}
+        <a href="/remove/{{i}}">Remove</a>
+    </p>
+{% endfor %}
+
+<h2>Total: ₹{{ total }}</h2>
+
+<a href="/">⬅ Back to Menu</a>
